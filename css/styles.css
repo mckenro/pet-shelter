@@ -17,3 +17,11 @@
 #inputPicture{
   width:220px;
 }
+.newPetInfo{
+  height: 400px;
+  float:left;
+  border: 3px double grey;
+}
+.description{
+  margin: 5px;
+}
