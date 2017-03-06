@@ -47,4 +47,20 @@ $(document).ready(function(){
     $("form#handOff").show();
   })
 
+  $("button#getPet").click(function (event) {
+    event.preventDefault();
+    $("#getPet").hide();
+    $("#description").hide();
+    $("#moreInfo").hide();
+    $("#submitInterest").show();
+    $("form.getNewPet").show();
+  })
+
+  $("button#submitInterest").click(function (event) {
+    event.preventDefault();
+    $("#description").show();
+    $("#moreInfo").show();
+    $(".getNewPet").hide();
+  });
+
 });

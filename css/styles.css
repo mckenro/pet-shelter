@@ -20,6 +20,10 @@
   height: 220px;
 }
 
+p {
+  margin-top: 12px;
+}
+
 ul {
   margin-top: 12px;
 }
@@ -29,13 +33,20 @@ ul {
   margin-left: -30px;
 }
 
+.getNewPet {
+  display: none;
+}
+
 #handOff {
   display: none;
 }
 
 #inputPicture{
   width:220px;
+}
 
+#submitInterest {
+  display: none;
 }
 .newPetInfo{
   height: 400px;
