@@ -10,11 +10,20 @@
 };
 
   NewAnimal.prototype.post= function(){
-    $(".spot").text(this.name);
-    $(".spot").append("<img id='inputPicture' src ='" + this.photo + "'>");
-    $("#moreInfo").append("<li>" + "Type: " + this.type + "</li>");
-    $("#moreInfo").append("<li>" + "Age: " + this.age + "</li>");
-    $("#descript").text(this.description);
+    $("#allPets").prepend('<div class="col-md-3 pet-post">' +
+      '<div class="newPetInfo"' +
+      '<h2 class="' + this.name + this.age + '"></h2>' +
+      '<div class="' + this.type + this.age + '"></div>' +
+      '<ul id="' + this.name + this.type + '"></ul>' +
+      '<p class="description" id="' + this.age + this.type + '"></p>' +
+      '</div>' +
+    '</div>');
+
+    $("." + this.name + this.age).text(this.name);
+    $("." + this.type + this.age).append("<img id='inputPicture' src ='" + this.photo + "'>");
+    $("#" + this.name + this.type).append("<li>" + "Type: " + this.type + "</li>");
+    $("#" + this.name + this.type).append("<li>" + "Age: " + this.age + "</li>");
+    $("#" + this.age + this.type).text(this.description);
 
   }
 
@@ -37,10 +46,5 @@ $(document).ready(function(){
     event.preventDefault();
     $("form#handOff").show();
   })
-  //hide submit form on button click
-  //$("button#submitNewPet").click(function (event) {
-  //  event.preventDefault();
-
-//  })
 
 });
