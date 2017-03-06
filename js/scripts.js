@@ -1,10 +1,12 @@
 //backend
+
   function NewAnimal(name, type, age, description, photo){
   this.name = name;
   this.type = type;
   this.age = age;
   this.description = description;
   this.photo = photo;
+
 };
 
   NewAnimal.prototype.post= function(){
@@ -40,4 +42,15 @@ $(document).ready(function(){
     console.log(name);
     console.log(age);
   });
+  //show submit form on button click
+  $("button#petSubmit").click(function (event) {
+    event.preventDefault();
+    $("form#handoff").show();
+  })
+  //hide submit form on button click
+  $("button#submitNewPet").click(function (event) {
+    event.preventDefault();
+    $("form#handoff").hide();
+  })
+
 });
