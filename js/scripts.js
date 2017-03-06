@@ -1,30 +1,34 @@
 //backend
-  function NewAnimal(name, type, age, description, photo);
+  function NewAnimal(name, type, age, description, photo){
   this.name = name;
   this.type = type;
   this.age = age;
   this.description = description;
   this.photo = photo;
+};
 
   NewAnimal.prototype.post= function(){
-    $("#h2 spot").text(this.name);
-    $("#picSpot").text("<img src ='" + this.photo + "'>");
-    $("#ul spot").append("<li>" + "Type: " + this.type + "</li>");
-    $("#ul spot").append("<li>" + "Age: " + this.age + "</li>");
-    $("#p spot").text(this.description);
+    $(".spot").text(this.name);
+    $(".spot").append("<img id='inputPicture' src ='" + this.photo + "'>");
+    $("#moreInfo").append("<li>" + "Type: " + this.type + "</li>");
+    $("#moreInfo").append("<li>" + "Age: " + this.age + "</li>");
+    $("#descript").text(this.description);
 
   }
 
 
 //frontend
-$(document).ready(function{
-  ("##").submit(function(event){
-    var name = $("#name").val();
-    var type = $("#type").val();
-    var age = $("#age").val();
-    var description = $("#description").val();
-    var photo = $("#photo").val();
+$(document).ready(function(){
+  $("form#handOff").submit(function(event){
+    event.preventDefault();
+    var name = $("#handOffName").val();
+    var type = $("#handOffType").val();
+    var age = $("#handOffAge").val();
+    var description = $("#handOffDescription").val();
+    var photo = $("#handOffPhoto").val();
     var inputtedAnimal  = new NewAnimal(name, type, age, description, photo);
     inputtedAnimal.post();
+    console.log(name);
+    console.log(age);
   });
 });
