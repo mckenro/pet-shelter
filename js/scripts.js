@@ -30,18 +30,17 @@ $(document).ready(function(){
     var photo = $("#handOffPhoto").val();
     var inputtedAnimal  = new NewAnimal(name, type, age, description, photo);
     inputtedAnimal.post();
-    console.log(name);
-    console.log(age);
+    $("form#handOff").hide();
   });
   //show submit form on button click
   $("button#petSubmit").click(function (event) {
     event.preventDefault();
-    $("form#handoff").show();
+    $("form#handOff").show();
   })
   //hide submit form on button click
-  $("button#submitNewPet").click(function (event) {
-    event.preventDefault();
-    $("form#handoff").hide();
-  })
+  //$("button#submitNewPet").click(function (event) {
+  //  event.preventDefault();
+
+//  })
 
 });

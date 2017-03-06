@@ -12,10 +12,24 @@
 
 .pet-post {
   width: 22%;
-  margin: 6px;
+  margin: 6px 6px 30px 6px;
 }
 
-#handoff {
+.pet-post img {
+  width: 220px;
+  height: 220px;
+}
+
+ul {
+  margin-top: 12px;
+}
+
+.pet-post li {
+  list-style-type: none;
+  margin-left: -30px;
+}
+
+#handOff {
   display: none;
 }
 
